@@ -1,6 +1,7 @@
+// if we are using the custom fixture in the test means we need to mention the fixture file path
 import{test, expect} from '../Fixtures/customFixtures'
 
-
+// mention all the fxitures in the async funtion insidde the curly braces
 test(" Adding product to cart by Page Object Model by Fixture ", async({page, homepage,cartpage,productpage,signinpage})=>
 {
     // navigating to page
