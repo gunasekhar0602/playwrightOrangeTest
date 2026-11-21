@@ -1,11 +1,11 @@
 import{test,expect} from'@playwright/test'
 
-// import Loginpage from provide the Loginpage class path
+// import Loginpage by providing the Loginpage class path
 import { Loginpage } from '../pages/LoginPage'
-
 
 test('login test using POM',async({page})=>
 {
+    // navigate to url
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 
     // create a object for LoginPage class
