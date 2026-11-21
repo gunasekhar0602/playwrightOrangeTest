@@ -1,6 +1,6 @@
 import{test,expect} from'@playwright/test'
 
-// import Loginpage by providing the Loginpage class path
+// import Loginpage class by providing the Loginpage class path
 import { Loginpage } from '../pages/LoginPage'
 
 test('login test using POM',async({page})=>
