@@ -2,24 +2,29 @@
 // instead of test we can use base for creating the fixture
 import{test as base ,expect} from '@playwright/test'
 
-// import the page classes from the pages folder
-import { Loginpage } from '../pages/LoginPage'
+// import the Pageclasses from the pages folder
+import { Homepage } from '../pages/HomePage'
+import { Productpage } from '../pages/ProductPage'
+import { Cartpage } from '../pages/CartPage'
+import { Signinpage } from '../pages/SigninPage'
 
-
-// create an interface
-
-interface PageFixture
+// create interface
+interface Pagefixture
 {
-    // create objects for page classes inside the interface
-    // objectname:Classname
-    loginpage:Loginpage
+    // create objects for Pageclasses inside the inerface
+    // objectname:Pageclass
+    homepage:Homepage
+    productpage:Productpage
+    cartpage:Cartpage
+    signinpage:Signinpage
 }
 
-
-export const test=base.extend<PageFixture>
+export const test=base.extend<Pagefixture>
 ({
-    loginpage:async({page},use)=> use(new Loginpage(page))
+    homepage:async({page},user)=>user(new Homepage(page)),
+    productpage:async({page},use)=>use(new Productpage(page)),
+    cartpage:async({page},use)=>use(new Cartpage(page)),
+    signinpage:async({page},use)=>use(new Signinpage(page))
 })
-
 
 export {expect}
