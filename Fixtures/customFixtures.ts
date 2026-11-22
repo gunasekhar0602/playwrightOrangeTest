@@ -12,7 +12,7 @@ import { Signinpage } from '../pages/SigninPage'
 interface Pagefixture
 {
     // create objects for Pageclasses inside the inerface
-    // objectname:Pageclass
+    // fixturename:Pageclass
     homepage:Homepage
     productpage:Productpage
     cartpage:Cartpage
@@ -21,7 +21,7 @@ interface Pagefixture
 
 export const test=base.extend<Pagefixture>
 ({
-    homepage:async({page},user)=>user(new Homepage(page)),
+    homepage:async({page},use)=>use(new Homepage(page)),
     productpage:async({page},use)=>use(new Productpage(page)),
     cartpage:async({page},use)=>use(new Cartpage(page)),
     signinpage:async({page},use)=>use(new Signinpage(page))

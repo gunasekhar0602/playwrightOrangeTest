@@ -4,6 +4,7 @@ import{test, expect} from '../Fixtures/customFixtures'
 // mention all the fxitures in the async funtion insidde the curly braces
 test(" Adding product to cart by Page Object Model by Fixture ", async({page, homepage,cartpage,productpage,signinpage})=>
 {
+    // no need to create the objects. 
     // navigating to page
     await page.goto('https://www.amazon.in')
     await homepage.searchitem("Apple 17 Lavender");
